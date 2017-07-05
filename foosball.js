@@ -6,10 +6,10 @@ const bot_token = process.env.SLACK_FOOSBALL_BOT_TOKEN || '';
 const rtm = new RtmClient(bot_token);
 const util = require('util');
 const msgOps = require('./lib/msg_operations.js');
-let rtmConfig = {};
-let selfMatcher;
 const commandMatcher = new RegExp(`(?:—|--)[^\\s]+`);
 const channelMembers = {};
+let rtmConfig = {};
+let selfMatcher;
 
 // The client will emit an RTM.AUTHENTICATED event on successful connection, with the `rtm.start` payload if you want to cache it
 rtm.on(CLIENT_EVENTS.RTM.AUTHENTICATED, function (rtmStartData) {
@@ -19,8 +19,7 @@ rtm.on(CLIENT_EVENTS.RTM.AUTHENTICATED, function (rtmStartData) {
 });
 
 // you need to wait for the client to fully connect before you can send messages
-rtm.on(CLIENT_EVENTS.RTM.RTM_CONNECTION_OPENED, function () {
-});
+rtm.on(CLIENT_EVENTS.RTM.RTM_CONNECTION_OPENED, function () {});
 
 rtm.on(RTM_EVENTS.MESSAGE, function(msg) {
     if (msg.subtype && msg.subtype === 'subtype_changed') {
