@@ -11,7 +11,7 @@ npm install
 ### Run
 
 ```
-SLACK_FOOSBALL_BOT_TOKEN=<SLACK_BOT_TOKEN> node foosball.js
+SLACK_FOOSBALL_BOT_TOKEN=<SLACK_BOT_TOKEN> SLACK_FOOSBALL_GIPHY_KEY=<GIPHY_API_KEY> node foosball.js
 ```
 
 ### Licence

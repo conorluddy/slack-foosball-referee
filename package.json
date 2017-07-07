@@ -12,6 +12,8 @@
   "author": "Rory Haddon",
   "license": "MIT",
   "dependencies": {
-    "@slack/client": "^3.8.1"
+    "@slack/client": "^3.8.1",
+    "moment": "^2.18.1",
+    "request": "^2.81.0"
   }
 }
